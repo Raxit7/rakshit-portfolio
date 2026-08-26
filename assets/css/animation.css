@@ -1,0 +1,311 @@
+/*=========================================
+    ANIMATION STYLES
+=========================================*/
+
+/* Loader */
+
+@keyframes loaderFade {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loaderBar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* Floating Animation */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* Fade Up */
+
+.fade-up {
+  opacity: 0;
+
+  transform: translateY(60px);
+
+  transition: 0.8s ease;
+}
+
+.fade-up.active {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* Fade Left */
+
+.fade-left {
+  opacity: 0;
+
+  transform: translateX(-60px);
+
+  transition: 0.8s ease;
+}
+
+.fade-left.active {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/* Fade Right */
+
+.fade-right {
+  opacity: 0;
+
+  transform: translateX(60px);
+
+  transition: 0.8s ease;
+}
+
+.fade-right.active {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/* Zoom */
+
+.zoom {
+  opacity: 0;
+
+  transform: scale(0.85);
+
+  transition: 0.8s ease;
+}
+
+.zoom.active {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+/* Rotate */
+
+.rotate {
+  transition: 0.5s;
+}
+
+.rotate:hover {
+  transform: rotate(3deg);
+}
+
+/* Image Hover */
+
+.image-hover {
+  overflow: hidden;
+
+  border-radius: 20px;
+}
+
+.image-hover img {
+  transition: 0.5s;
+}
+
+.image-hover:hover img {
+  transform: scale(1.08);
+}
+
+/* Button Ripple */
+
+.btn {
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* Glow */
+
+.glow:hover {
+  box-shadow: 0 20px 60px rgba(200, 169, 106, 0.35);
+}
+
+/* Card Hover */
+
+.card {
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+}
+
+/* Infinite Marquee */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+
+  gap: 60px;
+
+  white-space: nowrap;
+
+  animation: marquee 25s linear infinite;
+}
+
+/* Cursor */
+
+.cursor-dot {
+  position: fixed;
+
+  width: 10px;
+
+  height: 10px;
+
+  background: #c8a96a;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 99999;
+}
+
+.cursor-outline {
+  position: fixed;
+
+  width: 40px;
+
+  height: 40px;
+
+  border: 1px solid #c8a96a;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 99998;
+}
+
+/* Pulse */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Hero Blob */
+
+@keyframes blob {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(20px, -20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.hero-blob {
+  animation: blob 10s infinite ease-in-out;
+}
+
+/* Glass Hover */
+
+.glass {
+  transition: 0.4s;
+}
+
+.glass:hover {
+  backdrop-filter: blur(30px);
+}
+
+/* Shine */
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 80px;
+
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  transform: skewX(-25deg);
+}
+
+.card:hover::before {
+  left: 130%;
+
+  transition: 1s;
+}
+@keyframes websiteScroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-65%);
+  }
+}
+@keyframes marqueeMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
